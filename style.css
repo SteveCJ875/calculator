@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+    background-color: green;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+    background-color: hotpink;
+  }
+.display{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: orange;
+    height: 100px;
+    width: 300px;
+    border-radius: 5%;
+    margin-bottom: 10px;
+}  
+.controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /*/repeat here*/
+    height: 500px;
+    width: 300px;
+    background-color: gray;
+    border-radius: 5%;
+    background-color: indigo;
+  
+}
+.memory{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row: 1;
+    grid-column: 1fr 2fr;
+}
+.memory button{
+  color: blue;
+  
+}
+.operations{
+    display: grid;
+    grid-template-rows: repeat(5,1fr) ;
+    grid-row: 1 / 6;
+    grid-column: 4;
+    background-color: rgb(221, 155, 12);
+}
+.operations button{
+  color: black;
+}
+.digits{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(4,1fr);
+    grid-row: 2 / 6;
+    grid-column: 1/4;
+    background-color:rgb(184, 32, 32);
+    color: green;
+}
+.digits :last-child{
+  grid-column: span 2;
+}
+.memory{
+    display: grid;
+    grid-row: 1;
+    grid-column: 1 / 4;
+    background-color: yellow;
+    padding: 10px;
+}
